@@ -1,16 +1,17 @@
 {
 	"manifest_version": 2,
-	"name": "OPSkins Helper",
-	"version": "0.1",
+	"name": "OPSkins Enhanced",
+	"version": "0.2.1",
 	"content_scripts": [
 		{
-			"matches": [
-				"https://opskins.com/?loc=shop_search&app=730_2*"
-			],
-			"js": ["jquery-2.2.3.min.js","index.js"]
+			"matches": [ "https://opskins.com/?loc=shop_search*app=730*" ],
+			"js": [ "jquery-2.2.3.min.js", "opskins.js" ]
 		}
 	],
+	"background": {
+		"scripts": [ "index.js" ]
+	},
 	"browser_action": {
 		"default_icon": "icon.png"
 	}
-}	
+}
